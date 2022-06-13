@@ -16,12 +16,12 @@ public class CycleDeVieTest {
 
     @BeforeClass
     public static void avantTousLesTests() {
-        System.out.println("Méthode statique @BeforeClass invoquée.==============\n");
+        System.out.println("Méthode statique @BeforeClass invoquée.\n");
     }
 
     @AfterClass
     public static void apresTousLesTests() {
-        System.out.println("Méthode statique @AfterClass invoquée.==============\n");
+        System.out.println("Méthode statique @AfterClass invoquée.\n");
     }
 
     @Test
