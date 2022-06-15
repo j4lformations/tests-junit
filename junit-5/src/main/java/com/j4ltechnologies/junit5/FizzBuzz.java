@@ -7,44 +7,47 @@ package com.j4ltechnologies.junit5;
  * @version 1.0 du 13/06/2022
  */
 public class FizzBuzz {
-    //    String generate(int nombre) {
-    String generate(int min, int max) {
-//        if (nombre == 1)
-//            return "1";
-//        return "2";
 
-//        if (nombre == 3)
-//            return "Fizz";
-//        if (nombre == 3 || nombre == 6)
-//            return "Fizz";
-
-//        if (nombre % 3 == 0)
-//            return "Fizz";
-//        if (nombre % 5 == 0)
-//            return "Buzz";
-
-//        if (min %15 == 0)
+    public String perform(int min, int max) {
+//        if (min % 15 == 0)
 //            return "FizzBuzz";
 //        if (min % 3 == 0)
 //            return "Fizz";
 //        if (min % 5 == 0)
 //            return "Buzz";
-//        return String.valueOf(min);
 
-        StringBuilder resultat = new StringBuilder();
+//        ---------------------------------
 
+//        String resultat = "";
+//        String resultat = evaluation(min);
+//
 //        if (min < max) {
-//            resultat += evaluate(max);
+//            resultat += evaluation(max);
 //        }
 //        return resultat;
 
-        while (min <= max) {
-            resultat.append(evaluate(min++));
-        }
-        return resultat.toString();
+//        ---------------------------------
+
+//        String resultat = evaluation(min);
+//        String resultat = "";
+//
+//        resultat = evaluation(min, max, resultat);
+//        return resultat;
+
+        //        ---------------------------------
+
+        return evaluation(min, max);
     }
 
-    private String evaluate(int nombre) {
+    private String evaluation(int min, int max/*, String resultat*/) {
+        String resultat = "";
+        while (min <= max) {
+            resultat += evaluation(min++);
+        }
+        return resultat;
+    }
+
+    private String evaluation(int nombre) {
         if (nombre % 15 == 0)
             return "FizzBuzz";
         if (nombre % 3 == 0)
@@ -52,5 +55,10 @@ public class FizzBuzz {
         if (nombre % 5 == 0)
             return "Buzz";
         return String.valueOf(nombre);
+    }
+
+    public static void main(String[] args) {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        System.out.println(fizzBuzz.evaluation(1, 100));
     }
 }
