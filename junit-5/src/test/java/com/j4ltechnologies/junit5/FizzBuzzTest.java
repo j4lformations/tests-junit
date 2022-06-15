@@ -2,9 +2,8 @@ package com.j4ltechnologies.junit5;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestClassOrder;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Classe FizzBuzzTest, créée le 13/06/2022 à 11:03
@@ -72,6 +71,7 @@ class FizzBuzzTest {
     public void retourne_12Fizz_si_les_parametres_sont_1_a_3() {
         assertEquals("12Fizz", fizzBuzz.perform(1, 3));
     }
+
     @Test
     public void retourne_12Fizz4Buzz_si_les_parametres_sont_1_a_5() {
         assertEquals("12Fizz4Buzz", fizzBuzz.perform(1, 5));
